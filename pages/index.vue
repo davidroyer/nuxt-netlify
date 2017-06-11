@@ -1,18 +1,35 @@
 <template>
   <section class="container">
-    <img src="../assets/img/logo.png" alt="Nuxt.js Logo" class="logo" />
-    <h1 class="title">
-      Universal Vue.js Application Framework
-    </h1>
-    <nuxt-link class="button" to="/about">
-      About page
-    </nuxt-link>
+    <div @click="runTransition($event)" class="test">Color Here</div>
   </section>
 </template>
 
-<style scoped>
+<script>
+export default {
+  methods: {
+    runTransition(event) {
+      console.log(event);
+    }
+  }
+}
+
+</script>
+<style scoped lang='scss'>
 .title
 {
   margin: 50px 0;
+}
+
+.test {
+  background: steelblue;
+  display: inline-block;
+  padding: 1em;
+  color: white;
+  cursor: pointer;
+  // transition: all .5s ease;
+  // position: relative;
+  &:hover {
+    background: #2b506f;
+  }
 }
 </style>

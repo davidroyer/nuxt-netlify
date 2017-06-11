@@ -21,7 +21,7 @@ export default {
   },
   head () {
     return {
-      title: `About Page (${this.name}-side)`
+      title: `Classes (${this.name}-side)`
     }
   }
 }

@@ -1,3 +1,6 @@
+$openSans : 'Open Sans', sans-serif;
+$Vollkorn : 'Vollkorn', serif;
+
 html, body
 {
   background-color: #fff;
@@ -6,6 +9,11 @@ html, body
   font-family: "Source Sans Pro", Arial, sans-serif;
   height: 100vh;
   margin: 0;
+  font-family: $Vollkorn;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 footer
@@ -21,8 +29,8 @@ a, a:hover, a:focus, a:visited
 }
 
 .logo {
-  width: 243px;
-  height: 218px;
+  /*width: 243px;
+  height: 218px;*/
 }
 
 .page-enter-active, .page-leave-active

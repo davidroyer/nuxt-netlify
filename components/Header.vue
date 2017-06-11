@@ -1,6 +1,6 @@
 <template>
-<header>
-  <h1>David K. Royer - Front End Web Developer</h1>
+<header class="header">
+  <img src="../assets/img/logo.png" alt="Nuxt.js Logo" class="logo" />
   <nav>
     <li v-for="(link, key) in links">
       <nuxt-link exact :to="link.href">{{link.title}}</nuxt-link>
@@ -13,16 +13,21 @@
 export default {
   data() {
     return {
-      links: [{
+      links: [
+        {
         href: '/',
         title: 'Home'
-      }, {
-        href: '/about',
-        title: 'About'
-      }, {
-        href: '/contact',
-        title: 'Contact'
-      }]
+        }, {
+          href: '/about',
+          title: 'About'
+        }, {
+          href: '/test',
+          title: 'Test'
+        }, {
+          href: '/contact',
+          title: 'Contact'
+        }
+    ]
     }
   }
 }
@@ -34,6 +39,26 @@ header {
     background: #35495e;
     text-align: center;
     padding: 1em;
+}
+
+.header {
+    background: #40526b;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 60;
+    box-shadow: 0 2px 5px 0 rgba(40, 31, 31, 0.56), 0 2px 10px 0 rgba(32, 32, 32, 0.52);
+    padding: .5em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      max-height: 100%;
+    }
 }
 h1 {
     color: white;
