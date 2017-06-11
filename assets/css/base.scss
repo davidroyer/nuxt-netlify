@@ -9,7 +9,7 @@ html, body
   font-family: "Source Sans Pro", Arial, sans-serif;
   height: 100vh;
   margin: 0;
-  font-family: $Vollkorn;
+  // font-family: $Vollkorn;
 }
 
 * {
@@ -35,7 +35,7 @@ a, a:hover, a:focus, a:visited
 
 .page-enter-active, .page-leave-active
 {
-  transition: opacity .5s
+  transition: opacity .3s ease-in-out;
 }
 .page-enter, .page-leave-active
 {

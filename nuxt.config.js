@@ -16,8 +16,9 @@ module.exports = {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Open+Sans:400,600|Vollkorn' }
     ]
   },
+
   build: {
-    vendor: ['vuetify']
+    vendor: ['axios', 'vuetify']
   },
   plugins: ['~plugins/vuetify.js'],
 
@@ -25,7 +26,8 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    { src: join(__dirname, 'css/app.styl'), lang: 'styl' }
+    { src: join(__dirname, 'css/app.styl'), lang: 'styl' },
+    { src: '~assets/css/main.scss', lang: 'scss'}
   ],
   // css: [
   //   { src: '~assets/css/main.scss', lang: 'scss'}

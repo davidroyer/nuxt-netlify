@@ -5,6 +5,7 @@
   "author": "David Royer <droyer01@gmail.com>",
   "private": true,
   "dependencies": {
+    "axios": "^0.16.2",
     "lodash": "^4.17.4",
     "node-sass": "^4.5.2",
     "nuxt": "latest",

@@ -1,5 +1,10 @@
 <template>
   <div>
+    <!-- <template v-for="post in posts">
+      <div class="post">
+        <p>{{post.title}}</p>
+      </div>
+    </template> -->
     <app-header/>
     <nuxt/>
     <app-footer/>
@@ -7,13 +12,31 @@
 </template>
 
 <script>
+
 import AppHeader from '~components/Header.vue'
 import AppFooter from '~components/Footer.vue'
+import axios from 'axios'
 
 export default {
   components: {
     AppHeader,
     AppFooter
+  },
+  data() {
+    return {
+      posts: []
+    }
+  },
+  created() {
+    this.getPosts()
+  },
+  methods: {
+    getPosts() {
+      axios.get('https://jsonplaceholder.typicode.com/posts')
+      .then((res) => {
+        this.posts = res.data
+      })
+    }
   }
 }
 </script>

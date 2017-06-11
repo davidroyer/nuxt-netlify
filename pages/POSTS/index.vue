@@ -1,23 +1,12 @@
 <template>
   <section class="container">
-    <h2>Posts</h2>
-     <ul class="posts">
-       <li v-for="post in posts">
-         <nuxt-link :to="'/posts/'+post.id">{{ post.title }}</nuxt-link>
-       </li>
-     </ul>
+    <h1>This is the post</h1>
+    <div @click="runTransition($event)" class="test">Color Here</div>
   </section>
 </template>
 
 <script>
-import axios from 'axios'
 export default {
-  asyncData () {
-    return axios.get('https://jsonplaceholder.typicode.com/posts')
-    .then((res) => {
-      return { posts: res.data }
-    })
-  },
   methods: {
     runTransition(event) {
       console.log(event);
